@@ -65,6 +65,14 @@ return require('packer').startup(function(use)
   use { 'hrsh7th/cmp-nvim-lsp' }
   use { 'hrsh7th/cmp-buffer' }
   use { 'saadparwaiz1/cmp_luasnip' }
+
+  use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+}
+
+
+
   if packer_bootstrap then
     require('packer').sync()
   end
